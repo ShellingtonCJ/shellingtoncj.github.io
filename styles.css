@@ -6,7 +6,7 @@ html {
 
 body {
    background: rgb(25,25,25);
-   background: linear-gradient(315deg, rgba(25,25,25,1) 0%, rgba(0,40,57,1) 75%);  
+   background: linear-gradient(315deg, rgba(25,25,25,1) 0%, rgba(0,40,57,1) 100%);  
    background-repeat: no-repeat;
    background-attachment: fixed;
    margin: 0;
