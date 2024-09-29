@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
 
 html {
    scroll-behavior: smooth;
@@ -23,4 +24,35 @@ body {
    font-style: normal;
    letter-spacing: 2px;
    font-size: 300%;
+}
+
+#description {
+   font-family: "Cabin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+   color: white;
+   font-size: 135%;
+}
+
+#Download {
+   font-family: "Poetsen One", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   color: black;
+   background: #ff7a7a;
+   border-color: #ff7a7a;
+   border-radius: 8px;
+   border-style:hidden;
+   padding: 0.8%;
+   font-size: 125%;
+   transition: padding 0.1s, background 0.1s;
+}
+
+#Download:hover {
+   cursor: pointer;
+   padding: 1.2%;
+   background: white;
 }
