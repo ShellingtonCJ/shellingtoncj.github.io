@@ -1,1 +1,0 @@
-# shellingtoncj.github.io
