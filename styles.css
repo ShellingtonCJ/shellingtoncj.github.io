@@ -14,8 +14,6 @@ body {
    height: 100%;
 }
 
-
-
 #title {
    color: white;
    margin-top: 10%;
@@ -51,8 +49,21 @@ body {
    transition: padding 0.1s, background 0.1s;
 }
 
+
+
+a:link{
+   text-decoration: none;
+ }
+ 
+
 #Download:hover {
    cursor: pointer;
    padding: 1.2%;
    background: white;
+}
+
+@media (max-width: 48em) {
+   #title {
+      margin-top: 30%;
+   }
 }
