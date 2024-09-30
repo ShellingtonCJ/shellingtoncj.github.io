@@ -94,6 +94,10 @@ a:link{
    color: white;
 }
 
+.Documentation-List a:visited:hover {
+   color: #ff7a7a;
+}
+
 .Documentation-List a:link:hover {
    color: #ff7a7a;
 }
