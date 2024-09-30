@@ -14,7 +14,7 @@ body {
    height: 100%;
 }
 
-#title {
+.title {
    color: white;
    margin-top: 10%;
    font-family: "Poetsen One", sans-serif;
@@ -66,4 +66,42 @@ a:link{
    #title {
       margin-top: 30%;
    }
+}
+
+.Documentation-List {
+   list-style-type: none;
+   color: white;
+   line-height: 32px;
+   position: fixed;
+   left: 0%;
+   margin: 0;
+   padding-left: 22px;
+   top: 0%;
+   padding-top: 5%;
+   background-color: rgb(36,36,36);
+   padding-bottom: 100%;
+   padding-right: 22px;
+   overflow-y: auto;
+   height: 200px;
+   text-decoration: none;
+}
+
+.Documentation-List a:link {
+   color: white;
+}
+
+.Documentation-List a:link:hover {
+   color: #ff7a7a;
+}
+
+.child {
+   text-indent: 15px;
+}
+
+.windowSnippet {
+
+}
+
+.snippet {
+
 }
