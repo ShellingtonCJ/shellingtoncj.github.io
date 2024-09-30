@@ -9,7 +9,7 @@
     <title>Oatmeal</title>
 </head>
 <body>
-
+   
    <header class="header">
       <a href="https://brodymanning.com" class="logo">Oatmeal</a>
       <input class="menu-btn" type="checkbox" id="menu-btn" />
@@ -26,16 +26,91 @@
       <li class="child"><a href="https://brodymanning.com/examples/window.html">Creating a window</a></li>
    </ul>
 
+   <div class="testing">
+      <center>
+         <h1 class="title">Creating a window</h1>
+         <p id="description">Creating a window in Oatmeal is actually quite easy. This is how you would do it.</p>
+      </center>
+      <div class="example">
+      <pre><code class="windowSnippet snippet">#include &lt;iostream&gt;
+#include "Oatmeal/Oatmeal.hpp"
+      
+      int main(int argc, char* argv[]) {
+      if (Oatmeal::Init() < 0) {
+         std::cerr << "Failed to init Oatmeal" << std::endl;
+      }
+      Window window("Window example", 860, 540);
+      window.fill(255, 255, 255);
+      while (Oatmeal::running) {
+         Oatmeal::update();
+         window.clear();
+         window.update();
+      }
+      window.quit();
+      Oatmeal::quit();
+      return 0;
+      }
+      </code></pre></div>
+   </div>
+
    <center>
-      <h1 class="title">Creating a window</h1>
+      <pre>
+         <p class="code-description">So, Let's run through what this does. First of all, we include the main Oatmeal header file
+            <code class="fit">#include "Oatmeal/Oatmeal.hpp"</code>This provides functionality for basic Oatmeal functions like windows.
+            
+
+Next, inside our main function, we try to initialize Oatmeal
+
+<code class="fit">if (Oatmeal::Init() < 0)</code>
+If the function returns a value less than zero, there was an error. So we check for the error and log it.
+
+<code class="fit">std::cerr << "Failed to init Oatmeal" << std::endl;</code>
+
+Next, we create a window. 
+
+<code class="fit">Window window("Window example", 860, 540);</code>
+
+The window constructor takes three arguments. A title, a width, and a height. See more about the <a id="underline" href="#">Window class</a>.
+
+
+Then, we fill the window with white.
+
+<code class="fit">window.fill(255,255,255)</code>
+
+What this does is makes it so whenever the window draws what is on the screen, it will always start by filling the window with white.
+
+
+Next, while Oatmeal is running, we call its update function to handle Oatmeal's events
+
+<code class="fit nohljsln">while (Oatmeal::running) {
+   Oatmeal::update();
+</code>
+
+Then, we clear the window and render our white to it, with the update function.
+
+<code class="fit nohljsln">window.clear();
+window.update();
+</code>
+
+The reason we clear the window before drawing things on it is that otherwise, we will make the program slow by not deleting things we have already drawn.
+
+
+If you close the window, Oatmeal::running will not be true and it will exit the loop. Then, we close the window and shtutdown Oatmeal
+
+<code class="fit nohljsln">window.quit();
+Oatmeal::quit();
+</code>
+
+</p>
+      </pre>
    </center>
 
-   
-
-    
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/cpp.min.js"></script>
-    <script>hljs.highlightAll()</script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+    <script>hljs.highlightAll();
+      hljs.initLineNumbersOnLoad();
+    </script>
 </body>
 </html>
