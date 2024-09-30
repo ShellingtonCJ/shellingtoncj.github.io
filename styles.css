@@ -72,7 +72,6 @@ a:link{
    list-style-type: none;
    color: white;
    line-height: 32px;
-   position: fixed;
    left: 0%;
    margin: 0;
    padding-left: 22px;
@@ -84,6 +83,15 @@ a:link{
    overflow-y: auto;
    height: 200px;
    text-decoration: none;
+   margin-bottom: 200px;
+}
+
+.code-description {
+   margin-left: 200px;
+   text-align: left;
+   color: white;
+   font-size: 110%;
+   text-wrap:wrap;
 }
 
 .Documentation-List a:link {
@@ -107,9 +115,25 @@ a:link{
 }
 
 .windowSnippet {
-
+   border-radius: 5%;
 }
 
 .snippet {
-
+   
 }
+
+.example {
+   max-width: fit-content;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+#underline {
+   text-decoration: underline;
+   color: #ff7a7a;
+}
+
+.fit {
+   max-width: fit-content;
+}
+
