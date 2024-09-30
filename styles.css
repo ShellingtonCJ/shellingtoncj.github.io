@@ -84,6 +84,7 @@ a:link{
    height: 200px;
    text-decoration: none;
    margin-bottom: 200px;
+   max-width: fit-content;
 }
 
 .code-description {
